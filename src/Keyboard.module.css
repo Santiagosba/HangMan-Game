@@ -1,0 +1,35 @@
+.button {
+    width: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.8); /* borde translúcido */
+    background: rgba(255, 255, 255, 0.05); /* vidrio translúcido */
+    -webkit-backdrop-filter: blur(6px); /* efecto vidrio para Safari */
+    backdrop-filter: blur(6px); /* efecto vidrio */
+    aspect-ratio: 1 / 1;
+    font-size: 2.5rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    border-radius: 15px; /* bordes redondeados estilo Frutiger */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 0 8px rgba(255,255,255,0.2); /* sombra y brillo */
+    transition: all 0.3s ease; /* animación suave */
+}
+
+.button.active {
+    background-color: rgba(117, 255, 140, 0.4); /* verde translúcido */
+    color: white;
+    box-shadow: 0 4px 20px rgba(117, 255, 140, 0.6); /* brillo más intenso */
+}
+
+.button.inactive {
+    opacity: 0.3;
+}
+
+.button:hover:not(:disabled),
+.button:focus:not(:disabled) {
+    background-color: rgba(0, 200, 255, 0.3); /* azul translúcido al hover */
+    box-shadow: 0 4px 15px rgba(0,200,255,0.5); /* brillo sutil al hover */
+    outline: none;
+}
